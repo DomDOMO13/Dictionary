@@ -21,6 +21,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="10 , 10 ,0 ,0"
+                Clicked="Button_Clicked_1"
         />
         
         <Button Text="Delete Word/Translation"

@@ -10,21 +10,23 @@
                Margin="10, 10, 0, 10"
                />
         
-        <Entry x:Name="entry"
-               Placeholder="Enter Word: "
+        <Entry x:Name="entry1"
+               Placeholder="Enter Word"
                WidthRequest="800"
-               Margin="-20, 10, 0, 10" 
+               Margin="8, 10, 0, 10" 
+               HorizontalOptions="Start"
                />
 
-        <Label Text="Enter English"
+        <Label Text="Enter English Word"
                TextColor="Aqua"
                FontSize="23"
                Margin="10, 10, 0, 10"
                />
-        <Entry x:Name="entry"
-               Placeholder="Enter Word: "
+        <Entry x:Name="entry2"
+               Placeholder="Enter Word"
                WidthRequest="800"
-               Margin="-20, 10, 0, 10" 
+               Margin="8, 10, 0, 10" 
+               HorizontalOptions="Start"
                />
 
         <Button Text="Add"
@@ -32,9 +34,9 @@
                 BackgroundColor="Green"
                 TextColor="Aqua"
                 Padding="40, 20"
-                HorizontalOptions="Center"
+                HorizontalOptions="Start"
                 VerticalOptions="Center"
-                Margin="0, 30, 0, 0" 
+                Margin="360, 30, 0, 0" 
                 />
 
     </VerticalStackLayout>
