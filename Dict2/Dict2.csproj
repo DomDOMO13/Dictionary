@@ -63,7 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Add.xaml">
+	  <MauiXaml Update="Translation1\Add.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="English_Khmer.xaml">

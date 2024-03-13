@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dict2.Add"
+             Title="Add">
+    <VerticalStackLayout>
+        <Label Text="បញ្ចូលពាក្យខ្មែរ"
+               TextColor="Aqua"
+               FontSize="23"
+               Margin="10, 10, 0, 10"
+               />
+        
+        <Entry x:Name="entry"
+               Placeholder="Enter Word: "
+               WidthRequest="800"
+               Margin="-20, 10, 0, 10" 
+               />
+
+        <Label Text="Enter English"
+               TextColor="Aqua"
+               FontSize="23"
+               Margin="10, 10, 0, 10"
+               />
+        <Entry x:Name="entry"
+               Placeholder="Enter Word: "
+               WidthRequest="800"
+               Margin="-20, 10, 0, 10" 
+               />
+
+        <Button Text="Add"
+                FontSize="20"
+                BackgroundColor="Green"
+                TextColor="Aqua"
+                Padding="40, 20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="0, 30, 0, 0" 
+                />
+
+    </VerticalStackLayout>
+</ContentPage>
