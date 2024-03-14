@@ -8,6 +8,7 @@ public partial class Add : ContentPage
 {
 
     public ObservableCollection<KhmerName> KhmerNames { get; set; } = new ObservableCollection<KhmerName>();
+    public ObservableCollection<EnglishName> EnglishNames { get; set; } = new ObservableCollection<EnglishName>();
 
     private readonly Idict _dict;
     public Add()
@@ -32,12 +33,24 @@ public partial class Add : ContentPage
             Khmer = entry1.Text
         };
 
+        var EnglishName = new EnglishName
+        {
+            English = entry2.Text
+        };
+
         KhmerNames.Add(KhmerName);
+        EnglishNames.Add(EnglishName);
     }
 
     public class KhmerName
     {
-        public string Khmer { get; set; }
+        public string? Khmer { get; set; }
+
+    }
+
+    public class EnglishName
+    {
+        public string? English { get; set; }
 
     }
 
