@@ -7,10 +7,9 @@ namespace Dict2;
 public partial class Add : ContentPage
 {
 
-    public ObservableCollection<KhmerName> KhmerNames { get; set; } = new ObservableCollection<KhmerName>();
-    public ObservableCollection<EnglishName> EnglishNames { get; set; } = new ObservableCollection<EnglishName>();
+    public ObservableCollection<MyName> MyNames { get; set; } = new ObservableCollection<MyName>();
 
-    private readonly Idict _dict;
+    //private readonly Idict _dict;
     public Add()
 	{
 		InitializeComponent();
@@ -28,32 +27,37 @@ public partial class Add : ContentPage
     private void AddInputItemTolist(object sender, EventArgs e)
     {
 
-        var KhmerName = new KhmerName
+        var KhmerName = new MyName
         {
-            Khmer = entry1.Text
+            Khmer = entry1.Text,
+            English = entry2.Text,
+
         };
 
-        var EnglishName = new EnglishName
-        {
-            English = entry2.Text
-        };
+        MyNames.Add(KhmerName);
 
-        KhmerNames.Add(KhmerName);
-        EnglishNames.Add(EnglishName);
+        WirteTextToFile(KhmerName, "C:\\Users\\dombu\\Desktop\\c# dobby\\Dict2\\Dict2\\output1");
+ 
+
     }
 
-    public class KhmerName
+    public async void WirteTextToFile(MyName text, string targetFileName)
+    {
+
+        string targetFile = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, targetFileName);
+
+        using StreamWriter streamWriter = File.AppendText(targetFile);
+        await streamWriter.WriteAsync(text.Khmer);
+        await streamWriter.WriteAsync(text.English);
+    }
+
+    public class MyName
     {
         public string? Khmer { get; set; }
-
-    }
-
-    public class EnglishName
-    {
         public string? English { get; set; }
 
-    }
 
+    }
 
 
 }

@@ -40,21 +40,16 @@
                 Clicked="AddInputItemTolist"
                 />
 
-        <ListView ItemsSource="{Binding KhmerNames}" >
+        <ListView ItemsSource="{Binding MyNames}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding Khmer}"></Label>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-        <ListView ItemsSource="{Binding EnglishNames}" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Label Text="{Binding English}"></Label>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Khmer}"
+                                   ></Label>
+                            <Label Text="{Binding English}"
+                                   ></Label>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
