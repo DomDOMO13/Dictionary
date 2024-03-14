@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Dict2.Translation1.Replace"
-             Title="Replace">
+             x:Class="Dict2.Translation1.Delete"
+             Title="Delete">
     <VerticalStackLayout>
         <Label 
-            Text="Enter Word to Replace"
+            Text="Enter Word to Delete"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             TextColor="Aqua"
@@ -29,7 +29,5 @@
             VerticalOptions="Center"
             Margin="360, 30, 0, 0" 
         />
-
-
     </VerticalStackLayout>
 </ContentPage>

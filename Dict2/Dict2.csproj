@@ -72,6 +72,9 @@
 	  <MauiXaml Update="Khmer_English.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Translation1\Delete.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Translation1\Replace.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
