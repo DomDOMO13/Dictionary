@@ -4,10 +4,18 @@
              x:Class="Dict2.Khmer_English"
              Title="Khmer_English">
     <VerticalStackLayout>
+
+        <Label Text="Selection"
+               TextColor="Aqua"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               />
+
         <Button Text="Add Word/Translation"
                 BackgroundColor="Green"
                 TextColor="Aqua"
-                Padding="20"
+                Padding="30,20"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="10 , 10 ,0 ,0"
@@ -17,7 +25,7 @@
         <Button Text="Replace Word/Translation"
                 BackgroundColor="Green"
                 TextColor="Aqua"
-                Padding="20"
+                Padding="18, 20"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="10 , 10 ,0 ,0"
@@ -27,7 +35,7 @@
         <Button Text="Delete Word/Translation"
                 BackgroundColor="Green"
                 TextColor="Aqua"
-                Padding="20"
+                Padding="21"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="10 , 10 ,0 ,0"
@@ -41,6 +49,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="10 , 10 ,0 ,0"
+                Clicked="Button_Clicked_3"
         />
 
     </VerticalStackLayout>

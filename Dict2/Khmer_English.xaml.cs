@@ -24,4 +24,9 @@ public partial class Khmer_English : ContentPage
         Navigation.PushAsync(new Delete());
     }
 
+    private void Button_Clicked_3(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Search());
+    }
+
 }

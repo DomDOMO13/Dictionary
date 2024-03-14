@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dict2.Translation1.Search"
+             Title="Search">
+    <VerticalStackLayout>
+        <Label 
+            Text="Enter Word to Find"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            TextColor="Aqua"
+            FontSize="23"
+            Margin="10, 10, 0, 10"
+            />
+
+        <Entry x:Name="entry2"
+           Placeholder="Enter Word"
+           WidthRequest="800"
+           Margin="8, 10, 0, 10" 
+           HorizontalOptions="Start"
+            />
+
+        <Button Text="Find"
+            FontSize="20"
+            BackgroundColor="Green"
+            TextColor="Aqua"
+            Padding="40, 20"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Margin="360, 30, 0, 0" 
+        />
+    </VerticalStackLayout>
+</ContentPage>
