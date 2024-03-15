@@ -13,7 +13,7 @@
             Margin="10, 10, 0, 10"
             />
 
-        <Entry x:Name="entry2"
+        <Entry x:Name="Search_entry"
            Placeholder="Enter Word"
            WidthRequest="800"
            Margin="8, 10, 0, 10" 
@@ -28,6 +28,23 @@
             HorizontalOptions="Start"
             VerticalOptions="Center"
             Margin="360, 30, 0, 0" 
+            Clicked="LoadAllItem"
         />
+
+        <ListView ItemsSource="{Binding MyNames}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Khmer}"
+                                   ></Label>
+                            <Label Text="{Binding English}"
+                                   ></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </VerticalStackLayout>
 </ContentPage>

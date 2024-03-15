@@ -37,7 +37,6 @@ public partial class Add : ContentPage
         MyNames.Add(KhmerName);
 
         WirteTextToFile(KhmerName, "C:\\Users\\dombu\\Desktop\\c# dobby\\Dict2\\Dict2\\output1");
- 
 
     }
 
@@ -45,10 +44,9 @@ public partial class Add : ContentPage
     {
 
         string targetFile = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, targetFileName);
-
         using StreamWriter streamWriter = File.AppendText(targetFile);
-        await streamWriter.WriteAsync(text.Khmer);
-        await streamWriter.WriteAsync(text.English);
+        await streamWriter.WriteLineAsync(text.Khmer + "-" + text.English);
+
     }
 
     public class MyName
@@ -56,8 +54,9 @@ public partial class Add : ContentPage
         public string? Khmer { get; set; }
         public string? English { get; set; }
 
-
     }
+
+
 
 
 }
