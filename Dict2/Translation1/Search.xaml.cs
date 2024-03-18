@@ -1,35 +1,40 @@
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace Dict2.Translation1;
 
-public partial class Search : ContentPage
+public class MyName
 {
+    public string? Khmer { get; set; }
+    public string? English { get; set; }
 
-    public ObservableCollection<MyName> MyNames { get; set; } = new ObservableCollection<MyName>();
-    public ObservableCollection<MyName> filterResult;
-    public Search()
-	{
-		InitializeComponent();
-        BindingContext = this;
-	}
+}
+public class SearchVM : INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler? PropertyChanged;
+    public void OnPropertyChanged([CallerMemberName] string name = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
-    public class MyName
+    private List<MyName> allWords = new List<MyName>();
+
+    private List<MyName> words;
+    public List<MyName> Words
     {
-        public string? Khmer { get; set; }
-        public string? English { get; set; }
-
+        get { return this.words; }
+        set { this.words = value; OnPropertyChanged(); }
     }
 
-    public void LoadAllItem(object sender, EventArgs e)
+    public void search(string keyterm)
     {
-        var searchterm = Search_entry.Text;
+        this.Words = this.allWords.Where(x => x.English.ToLower().StartsWith(keyterm.ToLower())).ToList();
     }
 
-    protected override void OnAppearing()
+    public SearchVM()
     {
-        ReadTextFile("C:\\Users\\dombu\\Desktop\\c# dobby\\Dict2\\Dict2\\output1");
-        this.filterResult = MyNames;
-        base.OnAppearing();
+
+        this.Words = this.allWords;
+
     }
 
     public async Task ReadTextFile(string targetFileName)
@@ -51,9 +56,38 @@ public partial class Search : ContentPage
 
             };
 
-            MyNames.Add(myname);
+            allWords.Add(myname);
 
         }
+        Words = allWords;
+
     }
+
+}
+
+public partial class Search : ContentPage
+{
+    private readonly SearchVM vm;
+    public Search()
+	{
+		InitializeComponent();
+        this.vm = new SearchVM();
+        this.BindingContext = vm;
+
+    }
+
+
+    public void LoadAllItem(object sender, EventArgs e)
+    {
+        this.vm.search(Search_entry.Text);
+    }
+    protected override void OnAppearing()
+    {
+        vm.ReadTextFile("C:\\Users\\dombu\\Desktop\\c# dobby\\Dict2\\Dict2\\output1");
+        base.OnAppearing();
+    }
+    public ObservableCollection<MyName> MyNames { get; set; } = new ObservableCollection<MyName>();
+
+    
 
 }

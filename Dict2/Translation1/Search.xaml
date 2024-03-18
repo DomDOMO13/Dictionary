@@ -31,7 +31,7 @@
             Clicked="LoadAllItem"
         />
 
-        <ListView ItemsSource="{Binding MyNames}">
+        <ListView ItemsSource="{Binding Words}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
