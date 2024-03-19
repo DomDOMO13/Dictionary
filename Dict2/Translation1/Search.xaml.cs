@@ -77,7 +77,7 @@ public partial class Search : ContentPage
     }
 
 
-    public void LoadAllItem(object sender, EventArgs e)
+    public void OnEntryTextChanged(object sender, EventArgs e)
     {
         this.vm.search(Search_entry.Text);
     }

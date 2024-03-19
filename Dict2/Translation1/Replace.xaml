@@ -13,11 +13,43 @@
             Margin="10, 10, 0, 10"
             />
 
+        <Entry x:Name="entry_replace"
+            Placeholder="Enter Word"
+            WidthRequest="800"
+            Margin="8, 10, 0, 10" 
+            HorizontalOptions="Start"
+            />
+
+        <Label 
+            Text="Enter New Word"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            TextColor="Aqua"
+            FontSize="23"
+            Margin="10, 10, 0, 10"
+            />
+
+        <Entry x:Name="entry1"
+            Placeholder="Enter Word"
+            WidthRequest="800"
+            Margin="8, 10, 0, 10" 
+            HorizontalOptions="Start"
+            />
+
+        <Label 
+            Text="Enter New Word"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            TextColor="Aqua"
+            FontSize="23"
+            Margin="10, 10, 0, 10"
+            />
+
         <Entry x:Name="entry2"
-           Placeholder="Enter Word"
-           WidthRequest="800"
-           Margin="8, 10, 0, 10" 
-           HorizontalOptions="Start"
+            Placeholder="Enter Word"
+            WidthRequest="800"
+            Margin="8, 10, 0, 10" 
+            HorizontalOptions="Start"
             />
 
         <Button Text="Find"
@@ -28,6 +60,7 @@
             HorizontalOptions="Start"
             VerticalOptions="Center"
             Margin="360, 30, 0, 0" 
+            
         />
 
 

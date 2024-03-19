@@ -18,18 +18,8 @@
            WidthRequest="800"
            Margin="8, 10, 0, 10" 
            HorizontalOptions="Start"
+           TextChanged="OnEntryTextChanged" 
             />
-
-        <Button Text="Find"
-            FontSize="20"
-            BackgroundColor="Green"
-            TextColor="Aqua"
-            Padding="40, 20"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            Margin="360, 30, 0, 0" 
-            Clicked="LoadAllItem"
-        />
 
         <ListView ItemsSource="{Binding Words}">
             <ListView.ItemTemplate>
