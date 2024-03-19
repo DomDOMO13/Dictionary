@@ -13,21 +13,47 @@
             Margin="10, 10, 0, 10"
             />
 
-        <Entry x:Name="entry2"
+        <Entry x:Name="Delete_tosearch_entry"
            Placeholder="Enter Word"
            WidthRequest="800"
            Margin="8, 10, 0, 10" 
            HorizontalOptions="Start"
             />
-
         <Button Text="Find"
-            FontSize="20"
-            BackgroundColor="Green"
-            TextColor="Aqua"
-            Padding="40, 20"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            Margin="360, 30, 0, 0" 
+                FontSize="20"
+                BackgroundColor="Green"
+                TextColor="Aqua"
+                Padding="40, 20"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Margin="360, 30, 0, 0" 
+                Clicked="LoadItem_ForDelete"
+            />
+
+        <Button Text="Delete"
+                FontSize="20"
+                BackgroundColor="Red"
+                TextColor="Aqua"
+                Padding="29, 20"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Margin="360, 30, 0, 0" 
+                Clicked="Delete_Item"
         />
+
+        <ListView ItemsSource="{Binding Words}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Khmer}"
+                           ></Label>
+                            <Label Text="{Binding English}"
+                           ></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>
