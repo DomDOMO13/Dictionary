@@ -11,7 +11,6 @@
             Direction="Column">
             
             
-
             <Label Text="Selection"
                    TextColor="AliceBlue"
                    FontSize="20" 
@@ -20,15 +19,6 @@
                    Margin="0, 0, 0, 10"
                    />
             
-
-            <Button
-                Clicked="Button_Clicked" 
-                Text="Go to page English-Khmer"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Margin="0, 0, 0, 10"
-                />
-
             <Button
                 Clicked="Button_Clicked_1"
                 Text="Go to page Khmer-English"

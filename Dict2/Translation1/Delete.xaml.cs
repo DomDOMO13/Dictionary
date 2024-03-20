@@ -79,7 +79,7 @@ public partial class Delete : ContentPage
     }
 
 
-    public void LoadItem_ForDelete(object sender, EventArgs e)
+    public void OnEntryTextChanged(object sender, EventArgs e)
     {
         this.vm.search(Delete_tosearch_entry.Text);
     }

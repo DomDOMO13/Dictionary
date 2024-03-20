@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dict2.Translation1.ReplaceMenu"
+             Title="ReplaceMenu">
+    <ScrollView>
+        <FlexLayout
+        
+            JustifyContent="SpaceBetween"
+            AlignContent="Center"
+            Direction="Column"
+            HeightRequest="200"
+            Margin="0, -150, 0, 0"
+            >
+
+
+            <Label Text="Selection"
+               TextColor="AliceBlue"
+               FontSize="20" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="0, 0, 0, 10"
+               />
+
+            <Button
+                Clicked="Replace_Khmer_btn"
+                Text="Replace By Khmer"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                />
+
+            <Button
+                Clicked="Replace_English_btn"
+                Text="Replace By English"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                />
+
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

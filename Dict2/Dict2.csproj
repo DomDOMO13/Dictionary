@@ -63,10 +63,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Translation1\Replacing Folder\ReplaceEnglish.xaml.cs">
+	    <DependentUpon>ReplaceEnglish.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Translation1\Add.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="English_Khmer.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Khmer_English.xaml">
@@ -75,7 +78,13 @@
 	  <MauiXaml Update="Translation1\Delete.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Translation1\Replace.xaml">
+	  <MauiXaml Update="Translation1\ReplaceMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Translation1\Replacing Folder\ReplaceEnglish.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Translation1\Replacing Folder\ReplaceKhmer.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Translation1\Search.xaml">
