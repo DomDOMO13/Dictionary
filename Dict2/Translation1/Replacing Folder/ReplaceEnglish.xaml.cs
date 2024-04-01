@@ -11,7 +11,6 @@ public partial class ReplaceEnglish : ContentPage
         InitializeComponent();
         BindingContext = this;
 
-
     }
 
     private void Replacebtn(object sender, EventArgs e)
